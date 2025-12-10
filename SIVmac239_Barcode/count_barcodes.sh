@@ -1,7 +1,7 @@
 #! /bin/bash
 
 for i in *.fastq.gz; do \
-  base=$(basename -s .fastq.gz $i); \
+  base=$(basename -s .fastq.gz "${i}"); \
   fastplong -i "${i}" -o "${base}"_fpl.fastq.gz -l 1200 --length_limit 20000 && rm fastplong*; \
   minimap2 -ax lr:hq barcode_reference.fas "${base}"_fpl.fastq.gz > "${base}".sam && rm "${base}"_fpl.fastq.gz; \
   samtools view -bS -F 0x904 "${base}".sam > "${base}".bam && rm "${base}".sam; \
