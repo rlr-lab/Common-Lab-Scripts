@@ -1,0 +1,139 @@
+% Northwestern University theme for poster
+
+%Colors
+\definecolor{NUPurple}{RGB}{078, 042, 132}
+\definecolor{Purple90}{RGB}{91, 59, 140}
+\definecolor{Purple80}{RGB}{104, 076, 150}
+\definecolor{Purple70}{RGB}{118, 093, 160}
+\definecolor{Purple60}{RGB}{131, 110, 170}
+\definecolor{Purple50}{RGB}{147, 128, 182}
+\definecolor{Purple40}{RGB}{164, 149, 195}
+\definecolor{Purple30}{RGB}{182, 172, 209}
+\definecolor{Purple20}{RGB}{204, 196, 223}
+\definecolor{Purple10}{RGB}{228, 224, 238}
+
+\definecolor{Purple160}{RGB}{029, 002, 053}
+\definecolor{Purple150}{RGB}{038, 008, 065}
+\definecolor{Purple140}{RGB}{048, 016, 078}
+\definecolor{Purple130}{RGB}{056, 023, 090}
+\definecolor{Purple120}{RGB}{064, 031, 104}
+\definecolor{Purple110}{RGB}{072, 036, 118}
+
+\definecolor{Black}{RGB}{0, 0, 0}
+\definecolor{Black50}{RGB}{113, 108, 107}
+\definecolor{Black20}{RGB}{187, 184, 184}
+\definecolor{Black10}{RGB}{216, 214, 214}
+\definecolor{White}{RGB}{255, 255, 255}
+
+%Secondary Colors
+%Brights
+\definecolor{PMS360}{RGB}{88,185,71}
+\definecolor{PMS318}{RGB}{127, 206, 205}
+\definecolor{PMS279}{RGB}{80, 145, 205}
+\definecolor{PMS394}{RGB}{237, 233, 59}
+\definecolor{PMS7548}{RGB}{255, 197, 32}
+\definecolor{PMS7625}{RGB}{239, 085, 063}
+%Darks
+\definecolor{PMS7725}{RGB}{000, 134, 086}
+\definecolor{PMS314}{RGB}{000, 127, 164}
+\definecolor{PMS294}{RGB}{013, 045, 108}
+\definecolor{PMS611}{RGB}{217, 200, 038}
+\definecolor{PMS7571}{RGB}{202, 124, 027}
+\definecolor{PMS1595}{RGB}{216, 088, 032}
+
+% tikzposter color palette
+\definecolorpalette{NUPalette} {
+    \definecolor{colorOne}{named}{NUPurple}
+    \definecolor{colorTwo}{named}{NUPurple}
+    \definecolor{colorThree}{named}{NUPurple}
+}
+
+% tikzposter style
+\definecolorstyle{NUStyle} {
+    \usecolorpalette{NUPalette}
+}{
+    % background
+    \colorlet{backgroundcolor}{white}
+    \colorlet{framecolor}{White}
+    % title colors
+    \colorlet{titlefgcolor}{Black}
+    \colorlet{titlebgcolor}{White}
+    % block colors
+    \colorlet{blocktitlebgcolor}{colorOne}
+    \colorlet{blocktitlefgcolor}{White}
+    \colorlet{blockbodybgcolor}{White}
+    \colorlet{blockbodyfgcolor}{Black}
+    % innerblock colors
+    \colorlet{innerblocktitlebgcolor}{White}
+    \colorlet{innerblocktitlefgcolor}{Black}
+    \colorlet{innerblockbodybgcolor}{colorTwo}
+    \colorlet{innerblockbodyfgcolor}{Black}
+    % note colors
+    \colorlet{notefgcolor}{Black}
+    \colorlet{notebgcolor}{colorTwo}
+    \colorlet{noteframecolor}{colorTwo}
+}
+
+% -- STYLE --
+
+% background
+\definebackgroundstyle{NUBackgroundStyle}{
+    \draw[line width=0pt, color=framecolor, fill=backgroundcolor]
+    (bottomleft) rectangle (topright);
+}
+
+% title
+\definetitlestyle{NUTitleStyle}{
+    width=\textwidth, linewidth=5pt, titletotopverticalspace=0in
+}{
+    \begin{scope}[line width=\titlelinewidth,]
+    \draw[color=colorThree,round cap-round cap]
+    (\titleposleft,\titleposbottom)--(\titleposright,\titleposbottom);
+    \end{scope}
+}
+
+% block
+\defineblockstyle{NUBlockStyle}{
+    titlewidthscale=0.9, bodywidthscale=1, roundedcorners=5
+}{
+    \draw[color=framecolor, fill=blockbodybgcolor,
+    rounded corners=\blockroundedcorners] (blockbody.south west)
+    rectangle (blockbody.north east);
+    \ifBlockHasTitle
+    \draw[color=framecolor, fill=blocktitlebgcolor,
+    rounded corners=\blockroundedcorners] (blocktitle.south west)
+    rectangle (blocktitle.north east);
+    \fi
+}
+
+% -- THEME -- 
+% NU theme
+\definelayouttheme{NUTheme}{
+    \usecolorstyle[colorPalette=NUPalette]{NUStyle}
+    \usebackgroundstyle{NUBackgroundStyle}
+    \usetitlestyle{NUTitleStyle}
+    \useblockstyle{NUBlockStyle}
+    \useinnerblockstyle{Default}
+    \usenotestyle{Default}
+}
+
+% -- TITLE FORMAT --
+
+% place logo to right of centered title
+\makeatletter
+\renewcommand\TP@maketitle{%
+   \centering
+   \begin{minipage}[b]{0.8\linewidth}
+        \centering
+        \color{titlefgcolor}
+        {\bfseries \Huge \sc \@title \par}
+        \vspace*{1em}
+        {\huge \@author \par}
+        \vspace*{1em}
+        {\LARGE \@institute}
+    \end{minipage}%
+    \tikz[remember picture,overlay]\node[anchor=south east,xshift=0.5\linewidth,inner sep=0pt, yshift=30] {%
+       \@titlegraphic
+    };
+}
+\makeatother
