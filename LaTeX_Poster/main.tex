@@ -1,0 +1,117 @@
+% Research Day Poster
+% By Seth Borrowman
+\documentclass[20pt,margin=1in,innermargin=-4.5in,blockverticalspace=-0.25in]{tikzposter}
+\geometry{paperwidth=42in,paperheight=32.5in}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage[backend=biber,style=numeric]{biblatex}
+\usepackage{nutheme}
+
+\usepackage{mwe} % for placeholder images
+
+\addbibresource{refs.bib}
+
+% set theme parameters
+\tikzposterlatexaffectionproofoff
+\usetheme{NUTheme}
+\usecolorstyle{NUStyle}
+
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault} 
+\usepackage[T1]{fontenc}
+
+
+\title{\parbox{\linewidth}{\centering Poster Template}}
+\author{Seth H Borrowman$^{1,2}$}
+\institute{$^1$Northwestern University, Department of Medicine, Division of Infectious Diseases\\
+$^2$Northwestern University, Institute for Global Health, Center for Pathogen Genomics and Microbial Evolution}
+
+% begin document
+\begin{document}
+\maketitle
+\centering
+\begin{columns}
+    \column{0.32}
+    \block{An Important Problem}{
+         Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. \cite{cite:11}
+    }
+    \block{Model}{
+         Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. \cite{cite:12}
+         
+         \begin{align*} 
+            A \left( {G_{\mu,\Xi}},-\emptyset \right) & \ge \left\{ i^{-4} \colon \beta^{-1} \left( L^{-5} \right) = \int_{\mathbf{{m}}} \bigcap_{\varphi \in u}  \frac{1}{\| \Delta \|} \,d \mathfrak{{c}} \right\} \\ & \supset \left\{ C^{4} \colon {\Theta_{\mathfrak{{h}}}} \left( e \cdot \Lambda, \dots, \zeta \right) \ne \sum_{{\mathfrak{{v}}_{\mathbf{{y}}}} \in A}  \sin^{-1} \left( \frac{1}{L} \right) \right\} \\ & \ne \Delta \left( \Psi ( j ), \dots, \| {\mathscr{{N}}^{(s)}} \| \right) \cdot {\mathfrak{{\ell}}_{c}}^{-1} \left( {\mu^{(\omega)}} \right) .
+         \end{align*}
+         
+         Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+    }
+    \block{Inverse Problem}{
+        Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. \cite{cite:0}
+        
+        \begin{equation}
+            \min_{\mathbf{X} \in \mathbb{R}^{M\times N}} \big\lVert \mathbf{Y} - \mathbf{A}\mathbf{X} \big\rVert_{F}^{2}.
+            \label{eq:1}
+        \end{equation}
+        
+        Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+    }
+
+    \column{0.36}
+    \block{Results}{
+        Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. In \cite{cite:0}, it is shown that \begin{align*} q^{-3} & \le \frac{\overline{\sqrt{2}-\emptyset}}{\tilde{\omega} \left( e, \dots, \frac{1}{P ( A )} \right)} \wedge p \left( \bar{K}^{-5}, \tilde{m} \right) \\ & = \max_{B \to \emptyset}  1 \pm \dots \cup \pi \left(-q ( d ), \dots, \mathscr{{C}}'' \right)  \\ & \le \left\{ 1^{-7} \colon \cosh^{-1} \left(-\kappa \right) \le \max \int_{\hat{M}} \tanh \left( C^{5} \right) \,d \theta \right\} \\ & \le \prod  \cosh^{-1} \left( \pi^{-8} \right) + \dots \vee \omega \left(-\pi, \infty \sqrt{2} \right)  .\end{align*}
+        
+        Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+        \vspace{1em}
+        \begin{tikzfigure}[Big fancy graphic.]
+            \includegraphics[width=0.9\linewidth]{example-image}
+        \end{tikzfigure}
+        \vspace{1em}
+        Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.\cite{cite:1, cite:0}
+        Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+    }
+
+    \column{0.32}
+    \block{Comparison}{
+        Lorem ipsum dolor sit\cite{cite:1} amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. $\mathfrak{{\ell}} ( \mathfrak{{z}}' ) \ne \| {\varepsilon_{\xi}} \|$.
+        
+        \begin{tikzfigure}[Look, my method is better.]
+            \includegraphics[width=0.5\linewidth]{example-image}
+        \end{tikzfigure}
+    }
+    
+    \block{Remarks}{
+        Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.\cite{cite:0}
+    }
+    
+    \block{Acknowledgements}{
+        Lorem ipsum dolor sit amet, probo dolorem cu vis. Cu mei audire fabulas scriptorem, cu has clita fabulas. Sea id veritus maiorum indoctum, mea cu assum cetero. Ei posse movet maluisset vim. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere.
+    }
+    
+    \block{References}{
+        \vspace{-1em}
+        \begin{footnotesize}
+        \printbibliography[heading=none]
+        \end{footnotesize}
+    }
+\end{columns}
+
+\node [below left=71cm and 2.5cm] at (topright) {
+    \includegraphics[width=4cm]{QRCode.png}
+};
+\node [below left=75cm and 2cm] at (topright) {
+    \centering
+    Connect with me!
+};
+\node [below left = 71cm and 9cm] at (topright) {
+    \includegraphics[width=20cm]{feinberg-linear-purple-rgb-600.png}
+};
+
+\end{document}
