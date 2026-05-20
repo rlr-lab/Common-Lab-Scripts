@@ -8,5 +8,6 @@ Use this repo to share code used in multiple projects. Use the README here to gi
   - For a LaTeX slideshow template, see [wildcat](https://github.com/seth-borrowman/wildcat)
 - **Reference_Genomes/:** Commonly used reference genomes, and some associated BED/primer/SnapGene files.
 - **SIVmac239_Barcode/:** Files used for counting unique barcodes in SIVmac239 samples.
+- **denovo_assembly.sh:** Create a consensus sequence without a reference sequence. The tools that are used are optimized for long-read nanopore sequencing. Works well for near full length viral amplicons.
 - **ivar_consensus_alignment.sh:** Create consensus sequences and aligned BAMs for a collection of FASTQ files. Uses `ivar` to generate consensus sequences. Works by aligning to reference, creating consensus, realigning to the consensus, and generating a new consensus.
 
